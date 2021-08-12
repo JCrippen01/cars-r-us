@@ -1,24 +1,24 @@
-import { getSizes, setSize } from "./database.js"
+import { getWheels, setWheel } from "./database.js"
 
-const sizes = getSizes()
+const wheels = getWheels()
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "size") {
-            setSize(parseInt(event.target.value))
+        if (event.target.name === "wheel") {
+            setWheel(parseInt(event.target.value))
         }
     }
 )
 
-export const DiamondSizes = () => {
+export const Wheels = () => {
     let html = "<ul>"
 
     
-    const listItems = sizes.map (
-        (size) => {
+    const listItems = wheels.map (
+        (wheel) => {
         return `<li>
-            <input type="radio" name="size" value="${size.id}" /> ${size.carets}
+            <input type="radio" name="size" value="${wheel.id}" /> ${wheel.carets}
         </li>`
     }
 )
