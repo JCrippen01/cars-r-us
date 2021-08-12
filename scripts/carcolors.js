@@ -1,4 +1,4 @@
-import { getColors, setColors } from "./database.js"
+import { getColors, setColor } from "./database.js"
 
 const colors = getColors()
 
@@ -11,7 +11,7 @@ document.addEventListener(
     }
 )
 
-export const DiamondSizes = () => {
+export const Colors = () => {
     let html = "<ul>"
 
     

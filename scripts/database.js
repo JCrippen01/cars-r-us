@@ -1,17 +1,17 @@
 const database = {
-    color : [
+    colors : [
         {id: 1, paintColor: "Silver"},
         {id: 2, paintColor: "Midnight Blue"},
         {id: 3, paintColor: "Firebrick Red"},
         {id: 4, paintColor: "Spring Green"}
     ],
-    interior : [ 
+    interiors : [ 
          {id: 1, fabricType: "Beige Fabric"},
          {id: 2, fabricType: "Charcoal Fabric"},
          {id: 3, fabricType: "White Leather"},
          {id: 3, fabricType: "Black Leather}"}
     ],
-    technology : [ 
+    technologies : [ 
         {id: 1, fabricType: "Basic Package"},
         {id: 2, fabricType: "Navigation Package"},
         {id: 3, fabricType: "Visibility Package"},
@@ -27,33 +27,38 @@ const database = {
     
     orderBuilder: {},
 }
-export const setMetal = (id) => {
-    database.orderBuilder.metalId = id
+export const getColors = () => {
+    return database.colors.map(color => ({...color}))
     }
     
-export const setSize = (id) => {
-    database.orderBuilder.sizeId = id
+export const setColor = (id) => {
+    database.orderBuilder.colorId = id
     }
     
-export const setStyle = (id) => {
-    database.orderBuilder.styleId = id
+export const getInteriors = () => {
+    return database.interiors.map(interior => ({...interior}))
+    }
+
+export const setInterior = (id) => {
+    database.orderBuilder.interiorId = id
     }
    
-export const getMetals = () => {
-    return database.metals.map(metal => ({...metal}))
+export const getTechnologies = () => {
+    return database.technologies.map(technologie => ({...technologie}))
     }
     
-export const getSizes = () => {
-    return database.sizes.map(size => ({...size}))
+export const setTechnology = (id) => {
+    database.orderBuilder.TechnologyId = id
     }
     
-export const getStyles = () => {
-    return database.styles.map(style => ({...style}))
+export const getWheels = () => {
+    return database.wheels.map(wheel => ({...wheel}))
     }
-    
-export const getOrders = () => {
-    return database.customOrders.map(order => ({...order}))
+
+export const setWheel = (id) => {
+     database.orderBuilder.wheelId = id
+    }
+
     
 
 
-}
