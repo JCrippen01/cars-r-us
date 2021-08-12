@@ -5,7 +5,7 @@ const technologies = getTechnologies()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "technologies") {
+        if (event.target.name === "technology") {
             setTechnology(parseInt(event.target.value))
         }
     }
@@ -16,9 +16,9 @@ export const Technology = () => {
 
     
     const listItems = technologies.map (
-        (technologies) => {
+        (technology) => {
         return `<li>
-            <input type="radio" name="size" value="${technologies.id}" /> ${technologies.packageType}
+            <input type="radio" name="technology" value="${technology.id}" /> ${technology.packageType}
         </li>`
     }
 )

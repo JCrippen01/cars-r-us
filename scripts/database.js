@@ -9,19 +9,19 @@ const database = {
          {id: 1, fabricType: "Beige Fabric"},
          {id: 2, fabricType: "Charcoal Fabric"},
          {id: 3, fabricType: "White Leather"},
-         {id: 3, fabricType: "Black Leather}"}
+         {id: 4, fabricType: "Black Leather}"}
     ],
     technologies : [ 
         {id: 1, packageType: "Basic Package"},
         {id: 2, packageType: "Navigation Package"},
         {id: 3, packageType: "Visibility Package"},
-        {id: 3, packageType: "Ultra Package"}
+        {id: 4, packageType: "Ultra Package"}
    ],
     wheels : [ 
         {id: 1, wheelType: "17-inch Pair Radial"},
         {id: 2, wheelType: "17-inch Pair Radial Black"},
         {id: 3, wheelType: "18-inch Pair Spoke Silver"},
-        {id: 3, wheelType: "18-inch Pair Spoke Black"}
+        {id: 4, wheelType: "18-inch Pair Spoke Black"}
     ],
     carOrder : [],
     
@@ -44,11 +44,11 @@ export const setInterior = (id) => {
     }
    
 export const getTechnologies = () => {
-    return database.technologies.map(technologie => ({...technologie}))
+    return database.technologies.map(technology => ({...technology}))
     }
     
 export const setTechnology = (id) => {
-    database.orderBuilder.TechnologyId = id
+    database.orderBuilder.technologyId = id
     }
     
 export const getWheels = () => {

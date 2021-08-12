@@ -9,14 +9,14 @@ document.addEventListener(
     }
 )
 
-export const Interior = () => {
+export const Interiors = () => {
     const interiors = getInteriors()
     let html = "<ul class = 'style ul'>"
 
      const listItemsArray = interiors.map(
         (interior) => {
             return `<li class = "style">
-                <input type="radio" name="style" value="${interior.id}" /> ${interiors.fabricType}
+                <input type="radio" name="style" value="${interior.id}" /> ${interior.fabricType}
             </li>`
         }
     )
