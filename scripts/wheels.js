@@ -18,7 +18,7 @@ export const Wheels = () => {
     const listItems = wheels.map (
         (wheel) => {
         return `<li>
-            <input type="radio" name="size" value="${wheel.id}" /> ${wheel.carets}
+            <input type="radio" name="size" value="${wheel.id}" /> ${wheel.wheelType}
         </li>`
     }
 )
