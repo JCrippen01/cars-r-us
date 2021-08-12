@@ -1,22 +1,22 @@
-import { getStyles, setStyle } from "./database.js"
+import { getInteriors, setInterior } from "./database.js"
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "style") {
-            setStyle(parseInt(event.target.value))
+        if (event.target.name === "interior") {
+            setInterior(parseInt(event.target.value))
         }
     }
 )
 
-export const JewelryStyles = () => {
-    const styles = getStyles()
+export const Interior = () => {
+    const interiors = getInteriors()
     let html = "<ul class = 'style ul'>"
 
-     const listItemsArray = styles.map(
-        (style) => {
+     const listItemsArray = interiors.map(
+        (interior) => {
             return `<li class = "style">
-                <input type="radio" name="style" value="${style.id}" /> ${style.style}
+                <input type="radio" name="style" value="${interior.id}" /> ${interiors.fabricType}
             </li>`
         }
     )

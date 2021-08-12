@@ -12,16 +12,16 @@ const database = {
          {id: 3, fabricType: "Black Leather}"}
     ],
     technologies : [ 
-        {id: 1, fabricType: "Basic Package"},
-        {id: 2, fabricType: "Navigation Package"},
-        {id: 3, fabricType: "Visibility Package"},
-        {id: 3, fabricType: "Ultra Package"}
+        {id: 1, packageType: "Basic Package"},
+        {id: 2, packageType: "Navigation Package"},
+        {id: 3, packageType: "Visibility Package"},
+        {id: 3, packageType: "Ultra Package"}
    ],
     wheels : [ 
-        {id: 1, fabricType: "Beige Fabric"},
-        {id: 2, fabricType: "Charcoal Fabric"},
-        {id: 3, fabricType: "White Leather"},
-        {id: 3, fabricType: "Black Leather}"}
+        {id: 1, wheelType: "17-inch Pair Radial"},
+        {id: 2, wheelType: "17-inch Pair Radial Black"},
+        {id: 3, wheelType: "18-inch Pair Spoke Silver"},
+        {id: 3, wheelType: "18-inch Pair Spoke Black"}
     ],
     carOrder : [],
     
