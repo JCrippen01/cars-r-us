@@ -1,24 +1,24 @@
-import { getSizes, setSize } from "./database.js"
+import { getTechnologies, setTechnology } from "./database.js"
 
-const sizes = getSizes()
+const technologies = getTechnologies()
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "size") {
-            setSize(parseInt(event.target.value))
+        if (event.target.name === "technologies") {
+            setTechnology(parseInt(event.target.value))
         }
     }
 )
 
-export const DiamondSizes = () => {
+export const Technology = () => {
     let html = "<ul>"
 
     
-    const listItems = sizes.map (
-        (size) => {
+    const listItems = technologies.map (
+        (technologies) => {
         return `<li>
-            <input type="radio" name="size" value="${size.id}" /> ${size.carets}
+            <input type="radio" name="size" value="${technologies.id}" /> ${technologies.packageType}
         </li>`
     }
 )
