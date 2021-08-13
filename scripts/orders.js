@@ -1,8 +1,8 @@
-import { getColors, getOrders, getInteriors, getTechnologies } from "./database.js"
+import { getColors, getOrders, getInteriors, getTechnologies, getWheels } from "./database.js"
 const colors = getColors()
 const interiors = getInteriors()
 const wheels = getWheels()
-const technologys = getTechnologies()
+const technologies = getTechnologies()
 
 const buildOrderListItem = (order) => {
     const foundColor = colors.find(
@@ -24,7 +24,7 @@ const buildOrderListItem = (order) => {
         }
     )
 
-    const foundTechnology = technologys.find(
+    const foundTechnology = technologies.find(
         (technology) => {
             return technology.id === order.technologyId
         }
